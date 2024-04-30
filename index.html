@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 120px; background-color: blue">
+      <div class="header">
+        <div class="logo">
+          <img src="white-logo.png" alt="oguzhan" width="100" height="100" />
+        </div>
+        
+        <div class="title" id="techn" >
+          Oguz Han Engineering and Technology <br />
+          University of Turkmenistan
+        </div>
+        <div class="prepared-by">
+          Prepared by: Hakberdi Hallyyev<br />
+          & Sahet Gutlyyev
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    <div style="margin: 10px; margin-left: 35px;" >
+      <div id="language-switcher" style="margin-left: 85%;" >
+        <button class="lang" data-lang="en">English</button>
+        <button class="lang" data-lang="es">Turkmen</button>
+      </div>
+      <div >
+        <h1 style="justify-content: center; text-align: center ;  " id="pro" >
+          Projectile Motion
+          
+        </h1>
+        <div style="display: flex; flex-direction: row">
+          <div style="font-size: 20px">
+            <p id="heading" lang="en" >
+            </p>
+            <p>
+               <div>
+                <p id="content" lang="es" ></p>
+                <p>\[ v_{0x} = v_{0} \cdot \cos(\theta) \]</p>
+                <p>\[ v_{0y} = v_{0} \cdot \sin(\theta) \]</p>
+                <p id="buYerde" ></p>
+                <ul id="formula" >
+                    
+                </ul>
+                <p id="thes" ></p>
+            </div>
+            </p>
+            <div style="display: flex;" >
+              <img src="c.png" style="width: 650px; " alt="motion" />
+              <img src="a.png" style="width: 650px; " alt="motion" />
+            
+           </div>
+            <p id="trajectory" >
+            
+            </p>
+            <p>
+                <div>
+                    <p id="themotion" ></p>
+                    <p>\[ v_{y} = v_{0y} - g \cdot t \]</p>
+                    <ul id="forms" >
+                        <li>\( v_{y} \) = Vertical velocity at time \( t \)</li>
+                        <li>\( v_{0y} \) = Initial vertical velocity</li>
+                        <li>\( g \) = Acceleration due to gravity</li>
+                        <li>\( t \) = Time</li>
+                    </ul>
+                </div>
+            </p>
+            <p>
+                <div>
+                    <p id="grav" ></p>
+                    <p>\[ H = \frac{{v_{0y}^2}}{{2g}} \]</p>
+                    <p>\[ t_{\text{flight}} = \frac{{2 \cdot v_{0} \cdot \sin(\theta)}}{g} \]</p>
+                    <ul id="maxh" >
+                    
+                    </ul>
+                </div>
+            </p>
+            <p>
+                <div>
+          <p id="flights" ></p>             
+           <p>\[ R = \frac{{v_{0}^2 \cdot \sin(2\theta)}}{g} \]</p>
+                    <ul id="ranges" >
+                    </ul>
+                </div>
+            </p>
+            <p id="hor">
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+          <div style="width: 60%;">
+            <iframe src="projectile-motion_en.html" frameborder="0" width="100%" height="500px"></iframe>
+          </div>
+          <div class="container">
+            <div class="left-pane">
+              <h1>Projectile Motion Calculator</h1>
+              
+              <label for="initialVelocity">Initial Velocity (m/s): </label>
+              <input type="number" id="initialVelocity"><br>
+              
+              <label for="launchAngle">Launch Angle (degrees): </label>
+              <input type="number" id="launchAngle"><br>
+              
+              <label for="gravity">Acceleration due to Gravity (m/s²): </label>
+              <input type="number" id="gravity" value="9.81"><br>
+              
+              <button onclick="calculate()">Calculate</button>
+            </div>
+            <div class="right-pane" style="width: 300px;">
+              <h2>Results:</h2>
+              <p>Range (R): <span id="rangeResult"></span></p>
+              <p>Maximum Height (H): <span id="heightResult"></span></p>
+              <p>Time of Flight (t): <span id="timeResult"></span></p>
+              <p>Vertical Displacement (dy): <span id="verticalDisplacementResult"></span></p>
+              <p>Vertical Velocity (vy): <span id="verticalVelocityResult"></span></p>
+              <p>Vertical Motion: <span id="verticalMotionResult"></span></p>
+              <p>Horizontal Distance (dx): <span id="horizontalDistanceResult"></span></p>
+              <p>Horizontal Velocity (vx): <span id="horizontalVelocityResult"></span></p>
+            </div>
+        
+            <script src="scripts.js"></script>
+          </div>
+         
+        </div>
+      </div>
+      <div style="margin-top: 10px;">
+        <div style="display: flex; flex-direction: row">
+          <div style="max-width: 650px;" >  
+            <h1 style="justify-content: center; text-align: center" id="tran" >
+          Simple Pendulum
+          </h1>
+        <div style="font-size: 20px"><p id="comp" >
+          Components of a Simple Pendulum:<br/>
+          Bob: A mass suspended by a string or rod.<br/>
+          String or Rod: Provides the support for the bob.
+        </p>
+        <br>
+        <p id="comps" >
+          Factors Affecting the Pendulum: Length of String or Rod (L): Longer length leads to longer oscillation periods. <br/>
+           Acceleration due to Gravity (g): Dictates the speed of the pendulum's swing. Angle of Release <br/>
+           (θ): Initial angle from the vertical at which the pendulum is released. <br/> 
+        </p>
+       
+
+        <br>
+      <p>
+        <br>
+  <p id="compsa" >
+
+  </p>
+    </div>
+         
+        </div>
+         <div><img  style="width: 650px; "  src="pendulum.png"></div>
+      </div>
+        <div style="display: flex; flex-direction: row">
+          <div style="width: 65%;">
+            <iframe src="pendulum-lab_en.html" frameborder="0" width="100%" height="500px"></iframe>
+          </div>
+          <div class="container" style="display: flex; flex-direction: column">
+            <h2>Calculate Period of Oscillation (T) for a Pendulum</h2>
+            <label for="length">Length of the Pendulum (in meters):</label>
+            <input type="number" id="length" step="0.01"><br>
+            <button style="margin-top: -100px;" onclick="calculatePeriod()">Calculate</button>
+        
+            <h3>Result:</h3>
+            <p>Period of Oscillation (T): <span id="result"></span> seconds</p>
+            <script src="scripts.js"></script>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 10px;">
+        <div style="display: flex; flex-direction: row">
+          <div style="max-width: 650px;" >  
+            <h1 style="justify-content: center; text-align: center" id="hok" >
+              Hooke's Law
+          </h1>
+        <div style="font-size: 20px"><p id="hooks" >
+Hooke's Law is a principle in physics that describes the behavior of certain materials when they undergo deformation. It states that the force required to extend or compress a spring by some distance is proportional to that distance.
+Mathematically, Hooke's Law can be expressed as:
+<p>F = -k &middot; x</p  >
+<br>
+
+<p id="forca" ></p>
+</div>
+         
+        </div>
+         <div><img  style="width: 650px; padding-top: 60px;"  src="2.gif"></div>
+      </div>
+        <div style="display: flex; flex-direction: row">
+          <div style="width: 65%;">
+            <iframe src="hookes-law_en.html" frameborder="0" width="100%" height="500px"></iframe>
+          </div>
+          <div class="container" style="display: flex; flex-direction: row">
+            <div style="width: 400px;">
+              <h1>Hooke's Law Calculator</h1>
+              <label for="springConstant">Spring Constant (k) [N/m]:</label>
+              <input type="number" id="springConstant">
+              
+              <label for="distance">Distance (x) [m]:</label>
+              <input type="number" id="distance">
+              
+              <button onclick="calculateHooke()">Calculate</button>
+            </div>
+            
+            <div style="max-width: 100px;">
+              <h2>Result:</h2>
+              <p>Resultant Force (F): <span id="resulth"></span></p>
+            <script src="scripts.js"></script></div>
+          
+        </div>
+        
+          </div>
+        
+          
+        </div>
+      <div style="margin-top: 10px;">
+        <div style="display: flex; flex-direction: row">
+          <div style="max-width: 650px;" >  
+            <h1 style="justify-content: center; text-align: center" id="mener" >
+              Mechanical energy
+          </h1>
+        <div style="font-size: 20px"><p id="mechan" >
+        
+          Mechanical energy refers to the total energy possessed by an object due to its motion and position. It's the sum of kinetic energy (KE) and potential energy (PE) in a system.
+
+          In a closed system without any external forces doing work, the total mechanical energy remains constant. This principle is known as the conservation of mechanical energy.
+          
+          The formula for mechanical energy (ME) is:
+
+
+<p>KE = <sup>1</sup>&frasl;<sub>2</sub> × m × v<sup>2</sup></p>
+
+<br>
+<p id="repre" ></p>
+<br>
+<br>
+</div>
+         
+        </div>
+         <div><img  style="width: 650px; padding-top: 60px;"  src="energy.gif"></div>
+      </div>
+        <div style="display: flex; flex-direction: row">
+          <div style="width: 65%;">
+            <iframe src="energy-skate-park_en.html" frameborder="0" width="100%" height="500px"></iframe>
+          </div>
+          <div class="container" style="display: flex; flex-direction: row">
+            <div style="width: 400px;">
+              <h1>Mechanical Energy Calculator</h1>
+
+  <label for="mass">Mass (kg): </label>
+  <input type="number" id="mass"><br>
+
+  <label for="velocity">Velocity (m/s): </label>
+  <input type="number" id="velocity"><br>
+
+  <label for="height">Height (m): </label>
+  <input type="number" id="height"><br>
+
+  <button onclick="calculateEnergy()">Calculate</button>
+            </div>
+            
+            <div style="max-width: 100px;">
+              <h2>Results:</h2>
+              <p>Kinetic Energy (KE): <span id="keResult"></span> Joules</p>
+              <p>Potential Energy (PE): <span id="peResult"></span> Joules</p>
+              <p>Mechanical Energy (ME): <span id="meResult"></span> Joules</p>
+            
+              <script src="scripts.js"></script></div>
+          
+        </div>
+        
+          </div>
+        
+          
+        </div>
+        <div style="margin-top: 10px;">
+          <div style="display: flex; flex-direction: row ;font-size: 20px">
+            <div style="flex-direction: row; display: flex;" > 
+              <div>
+              <h1 style="justify-content: center; text-align: center" id="eles" >
+                Elestic  Collision
+            </h1>
+          
+            <p id="physic" >In physics, an elastic collision is a type of collision in which both momentum and kinetic energy are conserved. This means that the total momentum and total kinetic energy of the system before the collision are equal to the total momentum and total kinetic energy after the collision.</p>
+        
+            <h3 id="total" >1. Total momentum is conserved:</h3>
+            <p id="moment" >The total momentum of the system (the sum of the momenta of all the objects involved) before the collision is equal to the total momentum after the collision.</p>
+            
+            <p> \( m_1 \cdot v_{1i} + m_2 \cdot v_{2i} = m_1 \cdot v_{1f} + m_2 \cdot v_{2f} \) </p>
+            <ul id="masse" >
+                <li> \( m_1 \) and \( m_2 \) are the masses of the objects involved,</li>
+                <li> \( v_{1i} \) and \( v_{2i} \) are the initial velocities of the objects,</li>
+                <li> \( v_{1f} \) and \( v_{2f} \) are the final velocities of the objects.</li>
+            </ul>
+        
+            <h3 id="kine" >2. Total kinetic energy is conserved:</h3>
+            <p id="ener" >The total kinetic energy of the system before the collision is equal to the total kinetic energy after the collision.</p>
+            <p> \( \frac{1}{2} m_1 \cdot v_{1i}^2 + \frac{1}{2} m_2 \cdot v_{2i}^2 = \frac{1}{2} m_1 \cdot v_{1f}^2 + \frac{1}{2} m_2 \cdot v_{2f}^2 \) </p>
+            <p id="wher" >where the terms represent the kinetic energies of the objects before and after the collision.</p>
+          </div>   <div>
+            <p style="padding-top: 40px;" id="colli" >In an elastic collision, the objects bounce off each other without any loss of kinetic energy to other forms (such as heat, sound, or deformation). Examples of elastic collisions include collisions between billiard balls on a table or between gas molecules in ideal conditions.
+          
+          
+  Kinetic Energy (KE): It's the energy possessed by an object due to its motion. The formula for kinetic energy is:</p>
+  
+  <p>KE = <sup>1</sup>&frasl;<sub>2</sub> × m × v<sup>2</sup></p>
+  
+  
+  <br/>
+  <p id="poten" >Potential Energy (PE): It's the energy stored in an object due to its position or configuration. Here are two common types:
+  1. Gravitational Potential Energy (GPE): It's associated with an object's position relative to a reference point, often the Earth's surface. The formula for gravitational potential energy is:</p>
+  <p>GPE=m⋅g⋅h</p>
+  <p>EPE = <sup>1</sup>&frasl;<sub>2</sub> × k × x<sup>2</sup></p>
+
+  <p id="deno" >
+  </p>
+  </div>
+  </div>
+           
+          </div>
+        
+          <div style="display: flex; flex-direction: row">
+            <div style="width: 70%;">
+              <iframe src="collision-lab_en.html" frameborder="0" width="100%" height="580px"></iframe>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <div style="width: 400px;">
+                <h1  >Elastic Collision Calculator</h1>
+        <label for="mass1">Mass 1 (kg):</label>
+        <input type="number" id="mass1"><br>
+        <label for="velocity1">Initial Velocity 1 (m/s):</label>
+        <input type="number" id="velocity1"><br>
+        <label for="mass2">Mass 2 (kg):</label>
+        <input type="number" id="mass2"><br>
+        <label for="velocity2">Initial Velocity 2 (m/s):</label>
+        <input type="number" id="velocity2"><br>
+        <button onclick="calculateElasticCollision()">Calculate</button>
+        <h2>Results:</h2>
+        <p>Final Velocity 1: <span id="finalVelocity1"></span> m/s</p>
+        <p>Final Velocity 2: <span id="finalVelocity2"></span> m/s</p>    
+                  <script src="scripts.js"></script></div>
+            
+          </div>
+          
+            </div>
+          
+            
+          </div>
+        <div style="margin-top: 10px;">
+          <div style="display: flex; flex-direction: row ;font-size: 20px">
+            <div style="flex-direction: row; display: flex;" > 
+              <div>
+                <h1 id="charg" >Electric Charges and Fields</h1>
+                <p id="funda" >Electric charges are fundamental properties of matter. There are two types of charges: positive and negative. Like charges repel each other, and opposite charges attract each other.
+                The electric field is a region around a charged object where another charged object experiences a force. The direction of the electric field is the direction of the force that a positive test charge would experience if placed in the field.</p>
+                <h2 id="fiel" >Electric Field Intensity Formula</h2>
+                <p>E = k * |Q| / r^2</p>
+
+                <p id="inten" >The electric field intensity (E) at a point due to a point charge Q is given by:
+                
+              </p>
+              </div><div style="padding-top: 40px;">
+                <h2 id="line" >Electric Field Lines</h2>
+                <p id="imagi" >Electric field lines are imaginary lines that represent the direction of the electric field at different points around a charged object. The density of the lines indicates the strength of the field, with more lines indicating a stronger field.</p>
+               <br>
+                <img src="charges.PNG" alt="Electric Field Lines" width="700px">
+              </div>
+  </div>
+           
+          </div>
+        
+          <div style="display: flex; flex-direction: row">
+            <div style="width: 70%;">
+              <iframe src="charges-and-fields_en.html" frameborder="0" width="100%" height="580px"></iframe>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <div style="width: 400px;">
+                <h1>Electric Field Calculator</h1>
+        <label for="charge">Charge (Q) in Coulombs:</label>
+        <input type="number" id="charge" step="0.01"><br>
+
+        <label for="distance">Distance (r) in meters:</label>
+        <input type="number" id="distance" step="0.01"><br>
+
+        <button onclick="calculateElectricField()">Calculate Electric Field</button>
+        <h2>Results:<span id="field"></span></h2>
+       
+          
+                  <script src="scripts.js"></script></div>
+            
+          </div>
+          
+            </div>
+          
+            
+          </div>
+        <div style="margin-top: 10px;">
+          <div style="font-size: 20px">
+           
+              <div>
+                
+                <h1 id="laws" >Coulomb's Law</h1>
+                <p id="desc" >Coulomb's Law describes the electrostatic interaction between charged particles. It states that the magnitude
+                    of the electrostatic force \( F \) between two point charges is directly proportional to the product of the
+                    magnitudes of the charges and inversely proportional to the square of the distance between them.</p>
+                <div class="formula">
+                    <p style="text-align: center;">\[ F = \frac{k \cdot |q_1 \cdot q_2|}{r^2} \]</p>
+                    <ul id="magni" >
+                                   This law helps us understand how charged particles interact with each other. It is a fundamental principle in
+                    electromagnetism and is used in various fields of science and engineering.
+                    </ul>
+                </div>
+   
+            
+  </div>
+           
+       
+        
+          <div style="display: flex; flex-direction: row">
+            <div style="width: 70%;">
+              <iframe src="coulombs-law_en.html" frameborder="0" width="100%" height="580px"></iframe>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <div style="width: 400px;">
+                <h1>Coulomb's Law Calculator</h1>
+        <label for="charge1">Charge 1 (Q1) in Coulombs:</label>
+        <input type="number" id="charge1" step="0.01"><br>
+
+        <label for="charge2">Charge 2 (Q2) in Coulombs:</label>
+        <input type="number" id="charge2" step="0.01"><br>
+
+        <label for="distance">Distance (r) in meters:</label>
+        <input type="number" id="distance" step="0.01"><br>
+
+        <button onclick="calculateForceC()">Calculate Electric Force</button>
+        <h2>Results:<span id="columbs"></span></h2>
+    </div>
+
+    <script src="scripts.js"></script></div>
+            
+          </div>
+          
+            </div>
+          
+            
+          </div>
+        <div style="margin-top: 10px;">
+          <div style="font-size: 20px">
+           
+              <div>
+                <h1 id="motion" >Motion of Spring and Mass</h1>
+  <p id="attac" >
+    The motion of a mass attached to a spring is a classic example of simple harmonic motion (SHM). When a mass \( m \) is attached to a spring with spring constant \( k \), the spring exerts a force on the mass given by Hooke's Law:
+  </p>
+  <p>
+    \[ F = -kx \]
+  </p>
+ 
+  <p>
+    \[ m \frac{d^2x}{dt^2} = -kx \]
+  </p>
+ 
+ 
+  <p>
+    \[ x(t) = A \cos(\omega t + \phi) \]
+  </p>
+   <p id="equation" >
+    The equation of motion for the mass-spring system is given by Newton's second law:
+    This differential equation has solutions of the form:
+      The frequency of the oscillation is:
+  </p>
+  <p id="mod" >
+    where \( A \) is the amplitude of the oscillation, \( \omega = \sqrt{\frac{k}{m}} \) is the angular frequency of the oscillation, and \( \phi \) is the phase angle. The period of the oscillation is given by:
+  </p>
+  <p>
+    \[ T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}} \]
+  </p>
+  
+  <p>
+    \[ f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}} \]
+  </p>
+  <p id="sprin">
+    The motion of a mass attached to a spring is used to model many real-world phenomena, such as the motion of a mass on a vibrating object, the motion of a pendulum, and the behavior of atoms in a crystal lattice.
+  </p>
+  </div>
+           
+       
+        
+          <div style="display: flex; flex-direction: row">
+            <div style="width: 70%;">
+              <iframe src="masses-and-springs_en.html" frameborder="0" width="100%" height="580px"></iframe>
+            </div>
+            <div class="container" style="display: flex; flex-direction: row">
+              <div style="width: 400px;">
+                <h1>Spring and Mass Calculator</h1>
+                <label for="springConstantt">Spring Constant (k) [N/m]:</label>
+                <input type="number" id="springConstantt">
+                
+                <label for="masss">Mass (m) [kg]:</label>
+                <input type="number" id="masss">
+                
+                <button onclick="calculateS()">Calculate</button>
+                
+                <p id="spring"></p>
+                
+                <script src="scripts.js"></script>    </div>
+
+    <script src="scripts.js"></script></div>
+            
+          </div>
+          
+            </div>
+          
+            
+          </div>
+      </div>
+      
+      
+   
+  </body>
+</html>
